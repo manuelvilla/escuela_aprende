@@ -8,7 +8,6 @@
     font-style: normal;
 }
 
-
 body {
     color: #2f2f2f;
     font-family: 'Calibri';
@@ -33,11 +32,19 @@ label {
 
 p{
   font-family: 'Calibri';
-  color: #cccccc;
+  color: #9a9a9a;
 }
 
 .card-text{
   color: black;
+}
+
+.precio{
+  color: #47b0d0;
+}
+
+.invitados{
+  color: #d6b748;
 }
 
 

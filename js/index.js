@@ -1,6 +1,5 @@
 let proximos = [];
 let pasados = [];
-let cargados = 0;
 let divProximos = document.getElementById('proximos');
 let divPasados = document.getElementById('pasados');
 
@@ -15,8 +14,8 @@ $(document).ready(function () {
     proximos = eventos.filter(evento => evento.fecha > fechaActual) //Filtrar proximos
     pasados = eventos.filter(evento => evento.fecha < fechaActual); //Filtrar pasados
 
-    proximos.sort((a,b) => Date.parse(a.fecha) - Date.parse(b.fecha)); //Ordenar próximo
-    pasados.sort((a,b) => Date.parse(b.fecha) - Date.parse(a.fecha)); //Ordenar próximo
+    proximos.sort((a,b) => Date.parse(a.fecha) - Date.parse(b.fecha)); //Ordenar próximos
+    pasados.sort((a,b) => Date.parse(b.fecha) - Date.parse(a.fecha)); //Ordenar pasados
 
     let dosProximos = proximos.slice(0,2); //2 Eventos próximos
     let dosPasados = pasados.slice(0,2); //2 Eventos pasados
@@ -24,7 +23,7 @@ $(document).ready(function () {
     let htmlProximos = ``;
     let htmlPasados = ``;
 
-    dosProximos.map(evento => {
+    dosProximos.map(evento => { //Loop concatenar próximos
       htmlProximos += `<div class="col-sm-6">
       <div class="card">
         <div class="card-body">
@@ -36,7 +35,7 @@ $(document).ready(function () {
       </div>`;
     });
 
-    dosPasados.map(evento => {
+    dosPasados.map(evento => { //Loop concatenar pasados
       htmlPasados += `<div class="col-sm-6">
       <div class="card">
         <div class="card-body">
@@ -48,9 +47,9 @@ $(document).ready(function () {
       </div>`;
     });
 
-    divProximos.innerHTML = htmlProximos;
-    divPasados.innerHTML = htmlPasados;
-    
+    divProximos.innerHTML = htmlProximos; //Cardar proximos en DOM
+    divPasados.innerHTML = htmlPasados; //Cardar pasados en DOM
+
   });
 
 });
