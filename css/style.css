@@ -31,6 +31,15 @@ label {
     font-family: 'Calibri';
 }
 
+p{
+  font-family: 'Calibri';
+  color: #cccccc;
+}
+
+.card-text{
+  color: black;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -118,7 +127,5 @@ a:hover, a:active {
     margin-top: 20px;
     text-align: center;
     color: #fff;
-    
+
 }
-
-
